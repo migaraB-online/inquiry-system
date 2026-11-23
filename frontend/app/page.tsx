@@ -60,7 +60,7 @@ export default function LoginPage() {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="mt-1 w-full border rounded px-3 py-2 text-gray-900"
+            className="mt-1 w-full border rounded px-3 py-2 bg-white text-gray-900"
           />
         </div>
 
@@ -73,7 +73,7 @@ export default function LoginPage() {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="mt-1 w-full border rounded px-3 py-2 text-gray-900"
+            className="mt-1 w-full border rounded px-3 py-2 bg-white text-gray-900"
           />
         </div>
 
@@ -85,9 +85,11 @@ export default function LoginPage() {
           {loading ? 'Signing in...' : 'Sign in'}
         </button>
 
-        <p className="text-xs text-gray-500">
-          Test account: alice@coffeeninja.lk / Password123!
-        </p>
+        <div className="text-xs text-gray-500 space-y-1">
+          <p>Test accounts (password: Password123!)</p>
+          <p>alice@coffeeninja.lk</p>
+          <p>bob@coffeeninja.lk</p>
+        </div>
       </form>
     </main>
   );
